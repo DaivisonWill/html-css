@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+body {
+    background-image: url(espaco.jpg);
+    background-repeat: no-repeat;
+}
+div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+}
+ div img {
+    width: 400px;
+    height: auto;
+    animation: float 2s ease-in-out infinite;
+    position: fixed;
+
+ }
+ @keyframes float {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+ }
