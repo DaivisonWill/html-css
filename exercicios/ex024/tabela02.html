@@ -13,24 +13,64 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        tbody > tr:nth-child(even){ /* 2n-1 */
+            background-color: white;
+        }
+        tbody > tr:nth-child(odd) { /* 2n */
+            background-color: lightgray;
+        }
+
+        td.num {
+            text-align: right;
         }
     </style>
 </head>
 <body>
+    <h1>
+        Uso de tabelas grandes
+    </h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
     <table>
         <thead>
             <tr>
-                <th>Estados</th>
-                <th>População</th>
+                <th scope="col">Estados</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -44,7 +84,7 @@
             </tr>
             <tr>
                 <td>Rio de Janeiro</td>
-                < class="num">16.615.526</td>
+                <td class="num">16.615.526</td>
             </tr>
             <tr>
                 <td>Bahia</td>
@@ -145,10 +185,20 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td><strong>213.317.639</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>213.317.639</strong></td>
             </tr>
         </tfoot>
+        <caption>População das Unidades Federativas</caption>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus necessitatibus assumenda quos, laudantium mollitia sequi quam voluptates magnam amet ea ab est modi minus quibusdam! Corporis veritatis laudantium ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo modi reiciendis eaque error maxime quaerat cum, sequi, minima minus amet ratione magnam assumenda id facere dolorem sit dolores sed! Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda placeat, optio exercitationem reiciendis natus, ea qui ducimus suscipit officia, obcaecati eveniet laboriosam? Doloribus quibusdam dolorem velit unde alias vitae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi soluta libero totam corporis numquam nihil, voluptatem, assumenda quia nemo cum perferendis ipsam sunt necessitatibus delectus accusantium distinctio esse atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet aliquid minus, sunt autem tempore, laudantium molestias dolore nesciunt repellat voluptate illum repellendus repudiandae est ut perspiciatis laboriosam. Odio, harum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae ab numquam possimus voluptatibus, nobis, sequi expedita deleniti maxime dolor, aspernatur quisquam a aliquam! Exercitationem a vel quia optio possimus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus necessitatibus assumenda quos, laudantium mollitia sequi quam voluptates magnam amet ea ab est modi minus quibusdam! Corporis veritatis laudantium ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo modi reiciendis eaque error maxime quaerat cum, sequi, minima minus amet ratione magnam assumenda id facere dolorem sit dolores sed! Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda placeat, optio exercitationem reiciendis natus, ea qui ducimus suscipit officia, obcaecati eveniet laboriosam? Doloribus quibusdam dolorem velit unde alias vitae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi soluta libero totam corporis numquam nihil, voluptatem, assumenda quia nemo cum perferendis ipsam sunt necessitatibus delectus accusantium distinctio esse atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet aliquid minus, sunt autem tempore, laudantium molestias dolore nesciunt repellat voluptate illum repellendus repudiandae est ut perspiciatis laboriosam. Odio, harum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae ab numquam possimus voluptatibus, nobis, sequi expedita deleniti maxime dolor, aspernatur quisquam a aliquam! Exercitationem a vel quia optio possimus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus necessitatibus assumenda quos, laudantium mollitia sequi quam voluptates magnam amet ea ab est modi minus quibusdam! Corporis veritatis laudantium ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo modi reiciendis eaque error maxime quaerat cum, sequi, minima minus amet ratione magnam assumenda id facere dolorem sit dolores sed! Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda placeat, optio exercitationem reiciendis natus, ea qui ducimus suscipit officia, obcaecati eveniet laboriosam? Doloribus quibusdam dolorem velit unde alias vitae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi soluta libero totam corporis numquam nihil, voluptatem, assumenda quia nemo cum perferendis ipsam sunt necessitatibus delectus accusantium distinctio esse atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet aliquid minus, sunt autem tempore, laudantium molestias dolore nesciunt repellat voluptate illum repellendus repudiandae est ut perspiciatis laboriosam. Odio, harum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae ab numquam possimus voluptatibus, nobis, sequi expedita deleniti maxime dolor, aspernatur quisquam a aliquam! Exercitationem a vel quia optio possimus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus necessitatibus assumenda quos, laudantium mollitia sequi quam voluptates magnam amet ea ab est modi minus quibusdam! Corporis veritatis laudantium ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo modi reiciendis eaque error maxime quaerat cum, sequi, minima minus amet ratione magnam assumenda id facere dolorem sit dolores sed! Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda placeat, optio exercitationem reiciendis natus, ea qui ducimus suscipit officia, obcaecati eveniet laboriosam? Doloribus quibusdam dolorem velit unde alias vitae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi soluta libero totam corporis numquam nihil, voluptatem, assumenda quia nemo cum perferendis ipsam sunt necessitatibus delectus accusantium distinctio esse atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet aliquid minus, sunt autem tempore, laudantium molestias dolore nesciunt repellat voluptate illum repellendus repudiandae est ut perspiciatis laboriosam. Odio, harum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae ab numquam possimus voluptatibus, nobis, sequi expedita deleniti maxime dolor, aspernatur quisquam a aliquam! Exercitationem a vel quia optio possimus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat possimus necessitatibus assumenda quos, laudantium mollitia sequi quam voluptates magnam amet ea ab est modi minus quibusdam! Corporis veritatis laudantium ad. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo modi reiciendis eaque error maxime quaerat cum, sequi, minima minus amet ratione magnam assumenda id facere dolorem sit dolores sed! Consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda placeat, optio exercitationem reiciendis natus, ea qui ducimus suscipit officia, obcaecati eveniet laboriosam? Doloribus quibusdam dolorem velit unde alias vitae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi soluta libero totam corporis numquam nihil, voluptatem, assumenda quia nemo cum perferendis ipsam sunt necessitatibus delectus accusantium distinctio esse atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet aliquid minus, sunt autem tempore, laudantium molestias dolore nesciunt repellat voluptate illum repellendus repudiandae est ut perspiciatis laboriosam. Odio, harum!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae ab numquam possimus voluptatibus, nobis, sequi expedita deleniti maxime dolor, aspernatur quisquam a aliquam! Exercitationem a vel quia optio possimus!</p>
+
+
+
+
 </body>
 </html>
